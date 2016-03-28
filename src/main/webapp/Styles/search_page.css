@@ -1,0 +1,36 @@
+.body{
+	
+}
+.searchbar_outer{
+	margin-top :20px;
+	font-size: 500%;
+	margin-left :20px;
+}
+.searchtable{
+	border-spacing: 10px;
+	border-collapse: separate;
+}
+.search_box_outer input#query{
+	font-size: 23%;
+}
+.a_link a:link{
+	color: #000000;
+	text-decoration: none;
+}
+.a_link a:visited{
+	color: #000000;
+	text-decoration: none;
+}
+.a_link a:hover{
+	color: #747474;
+	text-decoration: none;
+}
+.a_link a:active{
+	color: #444444;
+	text-decoration: none;
+}
+
+td{
+	padding: 20px;
+}
+
