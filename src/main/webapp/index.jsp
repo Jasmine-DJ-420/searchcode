@@ -25,12 +25,17 @@
 				<td>
 					<div class="search_box_outer">
 					<input class="search_box" type="text" name="query" placeholder="Search..."
-						id="query" value="" onkeyup="handlekey('HomePage')" /> 
-					<button class="icon" onclick="javascript:SubmitSearch('')"><i class="fa fa-search"></i></button>
+						id="query" value="" onkeypress="EnterSearch()" onkeyup="handlekey('HomePage')" />
+					<button class="icon" onclick="javascript:SubmitSearch()" ><i class="fa fa-search"></i></button>
 					</div>
 				</td>
 			</tr>
 		</table>
+	</div>
+	<div class="footer">
+		<p class="copyright">
+			@2016 buaa.act
+		</p>
 	</div>
 </body>
 </html>

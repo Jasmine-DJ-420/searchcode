@@ -55,3 +55,16 @@
 	
 	line-height: normal;
 }
+
+.footer{
+	
+	
+	clear: both;
+    display: block;
+    text-align: center; 
+    margin: 0px auto;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+	
+}

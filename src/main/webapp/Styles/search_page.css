@@ -1,36 +1,116 @@
-.body{
+body{
+	padding-top :60px;
+}
+
+dl{
+	overflow: hidden;
+	position: relative;
 	
 }
-.searchbar_outer{
-	margin-top :20px;
-	font-size: 500%;
-	margin-left :20px;
+dt{
+	display: inline-block;
+	position: relative;
 }
-.searchtable{
-	border-spacing: 10px;
-	border-collapse: separate;
-}
-.search_box_outer input#query{
-	font-size: 23%;
-}
-.a_link a:link{
-	color: #000000;
-	text-decoration: none;
-}
-.a_link a:visited{
-	color: #000000;
-	text-decoration: none;
-}
-.a_link a:hover{
-	color: #747474;
-	text-decoration: none;
-}
-.a_link a:active{
-	color: #444444;
-	text-decoration: none;
+dd{
+	display: inline-block;
+	position: relative;
 }
 
+.container{
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 80%;
+}
+
+.footer{
+	text-align: center;
+}
+
+.hit-summary{
+	width: 100%;
+	height:220px; 
+	overflow:scroll;
+}
+
+
+tbody{
+	display: block;
+}
 td{
-	padding: 20px;
+	min-width: 30px;
+	height : 15px;
 }
 
+.highlight 
+{ background-color: yellow }
+
+.line-numbers
+{
+	background-color: #e2e2e2;
+	text-align: center;
+}
+
+.col-1{
+	float: left;
+	display: inline;
+	width: 80%;
+}
+.col-2{
+	float:right;
+	display: inline;
+	width: 15%;
+	text-align: left;
+	margin-right:0.1%;
+}
+
+.spacer{
+	width:800px;
+	border: 0;
+    height: 1px;
+    background: #9d9d9d;
+    background-image: -webkit-linear-gradient(left, #ffffff, #9d9d9d, #ffffff);
+    background-image: -moz-linear-gradient(left, #ffffff, #9d9d9d, #ffffff);
+    background-image: -ms-linear-gradient(left, #ffffff, #9d9d9d, #ffffff);
+    background-image: -o-linear-gradient(left, #ffffff, #9d9d9d, #ffffff);
+}
+
+.checkbox_number{
+	
+    border-radius:7px;
+    
+    background: #8b8b8b;
+    border: none;
+    height: 15px;
+    display:inline-block; 
+    color: #ffffff;
+    font-size: 8pt;
+    text-align:center;
+    margin-right:5px;
+    padding:5px;
+    display:-moz-inline-box;
+    line-height:8px;
+}
+
+.btn-default{
+	height:30px;
+	line-height:15px;
+	
+	font-weight:550;
+}
+
+select{
+	width: 40px;
+}
+
+#paging{
+	margin-left: 32.5%;
+}
+
+#subgroup{
+	margin-top: 15px;
+	margin-left:-10px;
+}
+
+#title-search{
+	margin-top: 4px;
+}
