@@ -25,10 +25,16 @@ function SubmitGroupDivide(definition)
 }
 
 
-function fullTable(tableID,codes,startline) {
+function fullTable(index,codes,startline) {
 	// Get a reference to the table
+	var tableID = "code-content" + index;
 	var tableRef = document.getElementById(tableID);	
 	var row,tr,td1,td2,tn1,tn2,tbody,tmp;
+	
+	var query = document.getElementById('query').value.toLowerCase();
+	var tmp2,offset;
+	
+	var flag = -1;
 	
 	// set tr and td tag
 	for (row=0,row_num=Number(startline); row<codes.length; row++,row_num++){
@@ -42,13 +48,24 @@ function fullTable(tableID,codes,startline) {
 		td1.appendChild(tn1);
 		td1.className = "line-numbers";
 		td2.appendChild(tn2);
-		td2.id = "code-row";
+		td2.id = "code-row"+tableID;
 		tr.appendChild(td1);
 		tr.appendChild(td2);
 		tbody.appendChild(tr);
 		
+		if(flag<0){
+			tmp2 = tmp.toLowerCase();
+			if(tmp2.indexOf(query)>0){
+//				alert(row_num);
+				flag = 1;
+				
+				offset = row*19.1;
+			}
+		}
 		tableRef.appendChild(tbody);
 	}
+	
+	$(".hit-summary"+index).scrollTop(offset);
 }
 
 function EnterSearch()

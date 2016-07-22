@@ -152,7 +152,7 @@
 					<dt>Author: </dt>
 					<dd><a href="https://github.com/${hit.getSource().get('userName')}">${hit.getSource().get("userName")}</a></dd>
 				</dl>
-				<div class="hit-summary">
+				<div class="hit-summary${status.index}" id="summary-id">
 					
 					<c:set target = "${codecontent}" property="content" value='${hit.getSource().get("content")}' />
 					<%String[] codes = codecontent.splitContent();%>
@@ -164,8 +164,8 @@
 						var code = '<%=codes[i]%>';
 						codes[<%=i%>]=code;
 					<%}%>
-					fullTable('<c:out value="${index}"/>',codes,1);
-					$('td#code-row').highlight('<%=query %>');
+					fullTable('<c:out value="${status.index}"/>',codes,1);
+					$('td#code-row'+'<c:out value="${index}"/>').highlight('<%=query %>');
 					</script>	
 				</div>
 				<hr class="spacer">

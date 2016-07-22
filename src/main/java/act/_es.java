@@ -54,13 +54,13 @@ public class _es {
 //			.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.3.237"), 9300))
 //			;
 			
-//			client.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("127.0.0.1"),9300));
+			client.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("127.0.0.1"),9300));
 			
-			client.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.3.105"),9300))
-			.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.3.142"),9300))
-			.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.3.222"),9300))
-			.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.3.223"),9300))
-			.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.3.237"),9300));
+//			client.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.3.105"),9300))
+//			.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.3.142"),9300))
+//			.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.3.222"),9300))
+//			.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.3.223"),9300))
+//			.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.3.237"),9300));
 			
 			flag = true;
 		} catch (UnknownHostException e) {
@@ -143,6 +143,13 @@ public class _es {
 		
 	}
 	
+	// search definition number
+	private void def_search(String str){
+		String query = str.toLowerCase();
+		
+		class_search = search(query,"class",0);
+	}
+	
 	public Map<String,Object> clone_search(String file_name){
 //		shs = null;
 //		QueryBuilder query = wildcardQuery("fileName", file_name);
@@ -189,10 +196,10 @@ public class _es {
 //		}
 		
 //		es.CodeClone("write");
-		es.search("write");
+		es.search("Synchronized");
 		SearchHit[] hits = es.getData();
 		
-		System.out.println(es.clone_search("AVPGYYHM6QRg_fbfsxjE"));
+		System.out.println(hits.length);
 		
 		es.close();
 	}
